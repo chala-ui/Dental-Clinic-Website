@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Dento | Set Appointment{% endblock title %} 
+{% block meta_description %}This is the website of Dento Medicals Appointment page{% endblock meta_description %}
+{% block content %}
+  <!-- ***** Breadcrumb Area Start ***** -->
+  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'pages/img/bg-img/12.jpg' %});">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <h2 class="title">Appointment</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="breadcumb--con">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'index' %}"><i class="fa fa-home"></i> Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Set Appointment</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Breadcrumb Area End ***** -->
+
+  <div class="container">
+    <center>
+        <h3>Review your info</h3>
+        <Strong>Name: </Strong>{{ name }}<br>
+        <Strong>Phone: </Strong>{{ phone }}<br>
+        <Strong>Email: </Strong>{{ email }}<br>
+        <Strong>Address: </Strong>{{ Address }}<br>
+        <Strong>Day: </Strong>{{ date }}<br>
+        <Strong>Time: </Strong>{{ time }}<br>
+        <Strong>Message: </Strong>{{ message }}
+      
+        <br><br>
+        <p><strong>Note: </strong>
+            This appointment hasn't been set yet. We will contact you shortly via phone to confirm your Appointment
+        </p>
+    </center>   
+  </div>
+  <br><br><br>
+{% endblock %}
